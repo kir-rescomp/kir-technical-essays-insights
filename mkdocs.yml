@@ -1,17 +1,17 @@
-site_name: KIR - Research Computing Training Catalogue
+site_name: KIR - Research Computing Essays/Insights
 site_author: The Kennedy Institute of Rheumatology, NDORMS, University of Oxford
 site_dir: public
-site_url: "https://kir-rescomp.github.io/kir-training-home/"
+site_url: "https://kir-rescomp.github.io/kir-technical-essays-insights/"
 
 #Repository information
-repo_name:  kir-rescomp/kir-training-home 
-repo_url: https://github.com/kir-rescomp/kir-training-home
+repo_name:  kir-rescomp/kir-technical-essays-insights 
+repo_url: https://github.com/kir-rescomp/kir-technical-essays-insights
 
 
 theme:
   name: material
-  logo: images/kir_oxford_combined_logo.png
-  favicon: images/kir_standalone_logo.png 
+  logo: images/
+  favicon: images/kir_standalone_logo.png
    # 404 page
   static_templates:
     - 404.html
