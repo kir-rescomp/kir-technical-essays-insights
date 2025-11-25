@@ -1,4 +1,4 @@
-site_name: KIR - Research Computing Essays / Insights
+site_name: KIR - Research Computing Technical Essays / Insights
 site_author: The Kennedy Institute of Rheumatology, NDORMS, University of Oxford
 site_dir: public
 site_url: "https://kir-rescomp.github.io/kir-technical-essays-insights/"
@@ -126,3 +126,4 @@ extra_css:
   - stylesheets/colors.css
   - stylesheets/side_bar_menu.css
   - stylesheets/background_colors.css
+  - stylesheets/header_alignment.css
