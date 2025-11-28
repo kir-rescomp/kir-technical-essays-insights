@@ -34,7 +34,7 @@ title: Home
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-microchip: **GPU Profiling with Nsight Systems**
+-   :fontawesome-solid-list-check: **Importance of Unit Testing**
     
     ---
     
