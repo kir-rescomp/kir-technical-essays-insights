@@ -38,9 +38,10 @@ title: Home
     
     ---
     
-    Comprehensive guide to profiling CUDA applications for genomics pipelines
+    Unit testing is crucial in software development because it verifies individual code units in 
+    isolation, enabling early bug detection, improved code quality, and greater confidence during refactoring and maintenance
     
-    [:octicons-arrow-right-24: Read more](blog/posts/gpu-profiling/)
+    [:octicons-arrow-right-24: Read more](blog/posts/unit-testing/unit_testing.md)
     
     <small>:octicons-calendar-24: Nov 28, 2024 · :octicons-clock-24: 7 min read</small>
 
