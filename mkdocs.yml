@@ -10,7 +10,7 @@ repo_url: https://github.com/kir-rescomp/kir-technical-essays-insights
 
 theme:
   name: material
-  logo: images/kir_techincal_insights_essays_favicon.svg
+  logo: images/kir_techincal_insights_essays_favicon_grayscale_color_stripes.svg
   favicon: images/kir_standalone_logo.png
    # 404 page
   static_templates:
