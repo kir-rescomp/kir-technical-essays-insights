@@ -127,3 +127,4 @@ extra_css:
   - stylesheets/side_bar_menu.css
   - stylesheets/background_colors.css
   - stylesheets/header_alignment.css
+  - stylesheets/landing_page_hero.css
