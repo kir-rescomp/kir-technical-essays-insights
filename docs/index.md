@@ -12,11 +12,8 @@ title: Home
     <img src="./images/kir_techincal_insights_essays_gray_with_coloured_stripes.svg" alt="rotating_dna" width="450" style="opacity: 0.9;"/>
 </p>
 
-
-
 <div class="landing-page">
   <div class="hero">
-    <h1>Research Computing Insights</h1>
     <p class="subtitle">HPC · Bioinformatics · System Administration</p>
     <p class="description">
       Technical articles about HPC, BioInformatics/Computational Biology, 
