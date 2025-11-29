@@ -8,9 +8,10 @@ title: Home
  <h1></h1>
 
 
-<p align="center">
+<p align="center" style="margin-bottom: -50px;">
     <img src="./images/kir_techincal_insights_essays_gray_with_coloured_stripes.svg" alt="rotating_dna" width="450" style="opacity: 0.9;"/>
 </p>
+
 
 <div class="landing-page">
   <div class="hero">
