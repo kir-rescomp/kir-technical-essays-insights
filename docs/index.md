@@ -25,10 +25,9 @@ title: Home
 
 <div class="topics-bar" markdown>
 
-
+[:material-school: Workshops](https://kir-rescomp.github.io/kir-training-home/){ .topic-chip }
 [:material-server-network: HPC](blog/category/hpc/){ .topic-chip }
 [:material-dna: Bioinformatics](blog/category/bioinformatics/){ .topic-chip }
-[:material-school: Tutorials](blog/category/tutorials/){ .topic-chip }
 [:material-docker: Containers](blog/category/containers/){ .topic-chip }
 [:fontawesome-solid-square-binary: Programming](blog/category/programming/){ .topic-chip }  
 
@@ -52,21 +51,11 @@ title: Home
     
     <small>:octicons-calendar-24: Nov 28, 2024 · :octicons-clock-24: 7 min read</small>
 
--   :material-package-variant: **Modern Software Management with Lmod**
+-   :material-git: **Version Control with Git: A Technical Primer**
     
     ---
     
-    Setting up EasyBuild and Lmod for reproducible HPC environments
-    
-    [:octicons-arrow-right-24: Read more](blog/posts/lmod-easybuild/)
-    
-    <small>:octicons-calendar-24: Nov 20, 2024 · :octicons-clock-24: 10 min read</small>
-
--   :material-git: **Git & GitHub for Researchers**
-    
-    ---
-    
-    Interactive workshop materials for version control in scientific computing
+    Why `Git` matters
     
     [:octicons-arrow-right-24: Read more](blog/posts/version_control/vc_git_Technical_primer.md)
     
