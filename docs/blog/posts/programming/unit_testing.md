@@ -1,3 +1,13 @@
+---
+date: 
+  created: 2025-11-29
+categories:
+  - Programming
+tags:
+  - Testing
+  - Python
+---
+
 <div class="dracula" markdown="1">
 
 # Unit Testing for Research Software: A Practical Guide
