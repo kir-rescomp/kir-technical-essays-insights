@@ -15,21 +15,27 @@ title: Home
 
 <div class="landing-page">
   <div class="hero">
-    <p class="subtitle">HPC · Bioinformatics · System Administration</p>
     <p class="description">
       Technical articles about HPC, BioInformatics/Computational Biology, 
-      and Scientific Computing
+      Scientific Computing and Experimental Methods
     </p>
   </div>
+</div>
 
-  <div class="topics-bar">
-    <a href="blog/category/hpc/" class="topic-chip">:material-server-network: HPC</a>
-    <a href="blog/category/bioinformatics/" class="topic-chip">:material-dna: Bioinformatics</a>
-    <a href="blog/category/tutorials/" class="topic-chip">:material-school: Tutorials</a>
-    <a href="blog/category/containers/" class="topic-chip">:material-docker: Containers</a>
-  </div>
+
+<div class="topics-bar" markdown>
+
+
+[:material-server-network: HPC](blog/category/hpc/){ .topic-chip }
+[:material-dna: Bioinformatics](blog/category/bioinformatics/){ .topic-chip }
+[:material-school: Tutorials](blog/category/tutorials/){ .topic-chip }
+[:material-docker: Containers](blog/category/containers/){ .topic-chip }
+[:fontawesome-solid-square-binary: Programming](blog/category/programming/){ .topic-chip }  
+
 
 </div>
+
+
 
 ## Featured Posts
 
