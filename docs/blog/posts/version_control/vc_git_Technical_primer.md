@@ -1,3 +1,12 @@
+---
+date: 
+  created: 2025-11-29
+categories:
+  - Versionion Control
+tags:
+  - Git
+---
+
 <div class="dracula" markdown="1">
 
 # Version Control with Git: A Technical Primer
