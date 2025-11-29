@@ -1,8 +1,11 @@
+<div class="dracula" markdown="1">
+
 # Unit Testing for Research Software: A Practical Guide
 
 <p align="center">
     <img src="../unit_testing_logo.png" alt="unit-test-logo" width="350"/>
 </p>
+
 
 Scientific software powers modern research, from analyzing genomic sequences to simulating climate models. Yet much of this software is written by researchers who are self-taught programmers, often under pressure to produce results quickly. Unit testing might seem like an extra burden, but it's actually a fundamental practice that makes your research more reliable, your code easier to maintain, and your findings more reproducible.
 
@@ -10,6 +13,7 @@ Scientific software powers modern research, from analyzing genomic sequences to 
 
 Unit testing is the practice of writing small, focused tests that verify individual components (or "units") of your code work correctly in isolation. Think of it as checking each instrument in your lab before running an experiment, rather than waiting until the end to discover something was miscalibrated.
 Let's look at a concrete example from computational biology. Suppose you're writing a tool to calculate quality scores from FASTQ files—a common task when processing sequencing data:
+
 
 ```python
 # seq_quality.py
@@ -294,3 +298,5 @@ Remember, every test you write is a bug you won't have to debug at midnight befo
  
 - - - 
 *Start with one test today. Your research deserves it.*
+
+</div>
