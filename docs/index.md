@@ -68,7 +68,7 @@ title: Home
     
     Interactive workshop materials for version control in scientific computing
     
-    [:octicons-arrow-right-24: Read more](blog/posts/git-workshop/)
+    [:octicons-arrow-right-24: Read more](blog/posts/version_control/vc_git_Technical_primer.md)
     
     <small>:octicons-calendar-24: Nov 15, 2024 · :octicons-clock-24: 5 min read</small>
 
