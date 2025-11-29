@@ -86,6 +86,7 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+      pygments_style: monokai
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:
@@ -130,3 +131,6 @@ extra_css:
   - stylesheets/background_colors.css
   - stylesheets/header_alignment.css
   - stylesheets/landing_page_hero.css
+  - stylesheets/code_block.css
+  - stylesheets/code_block_colour_dracula.css
+  - stylesheets/code_block_colour_monokai.css
