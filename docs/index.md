@@ -25,10 +25,9 @@ title: Home
 
 <div class="topics-bar" markdown>
 
-
+[:material-school: Workshops](https://kir-rescomp.github.io/kir-training-home/){ .topic-chip }
 [:material-server-network: HPC](blog/category/hpc/){ .topic-chip }
 [:material-dna: Bioinformatics](blog/category/bioinformatics/){ .topic-chip }
-[:material-school: Tutorials](blog/category/tutorials/){ .topic-chip }
 [:material-docker: Containers](blog/category/containers/){ .topic-chip }
 [:fontawesome-solid-square-binary: Programming](blog/category/programming/){ .topic-chip }  
 
@@ -48,27 +47,17 @@ title: Home
     Unit testing is crucial in software development because it verifies individual code units in 
     isolation, enabling early bug detection, improved code quality, and greater confidence during refactoring and maintenance
     
-    [:octicons-arrow-right-24: Read more](blog/posts/unit-testing/unit_testing.md)
+    [:octicons-arrow-right-24: Read more](blog/posts/programming/unit_testing.md)
     
     <small>:octicons-calendar-24: Nov 28, 2024 · :octicons-clock-24: 7 min read</small>
 
--   :material-package-variant: **Modern Software Management with Lmod**
+-   :material-git: **Version Control with Git: A Technical Primer**
     
     ---
     
-    Setting up EasyBuild and Lmod for reproducible HPC environments
+    Why `Git` matters
     
-    [:octicons-arrow-right-24: Read more](blog/posts/lmod-easybuild/)
-    
-    <small>:octicons-calendar-24: Nov 20, 2024 · :octicons-clock-24: 10 min read</small>
-
--   :material-git: **Git & GitHub for Researchers**
-    
-    ---
-    
-    Interactive workshop materials for version control in scientific computing
-    
-    [:octicons-arrow-right-24: Read more](blog/posts/git-workshop/)
+    [:octicons-arrow-right-24: Read more](blog/posts/version_control/vc_git_Technical_primer.md)
     
     <small>:octicons-calendar-24: Nov 15, 2024 · :octicons-clock-24: 5 min read</small>
 
