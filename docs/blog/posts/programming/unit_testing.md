@@ -190,7 +190,7 @@ def test_quality_threshold():
 
 Installing pytest
 
-```bash
+```py
 pip install pytest
 ```
 ### Writing Your First Test
@@ -204,7 +204,7 @@ def test_addition():
 ```
 ### Running Tests
 
-```bash
+```py
 # Run all tests in current directory
 pytest
 
@@ -222,7 +222,8 @@ pytest -x
 ```
 
 ### Structuring Your Project
-```
+
+```py
 my_project/
 ├── mypackage/
 │   ├── __init__.py
