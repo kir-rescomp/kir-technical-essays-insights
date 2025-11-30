@@ -8,4 +8,4 @@ mkdocs-glightbox
 mkdocs-material-extensions
 mkdocs-awesome-pages-plugin
 mkdocs-rss-plugin
-mkdocs=macros-plugin
+mkdocs-macros-plugin
