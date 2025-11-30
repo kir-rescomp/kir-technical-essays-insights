@@ -2,7 +2,7 @@ site_name: KIR - Research Computing Technical Essays / Insights
 site_author: The Kennedy Institute of Rheumatology, NDORMS, University of Oxford
 site_dir: public
 site_url: "https://kir-rescomp.github.io/kir-technical-essays-insights/"
-use_directory_urls: true  # Important for clean URLs
+#use_directory_urls: true  # Important for clean URLs
 
 
 #Repository information
@@ -116,6 +116,7 @@ plugins:
       zoomable: true
   - search:
       lang: en
+  - macros
   - blog:
       blog_dir: blog          # Directory where blog lives
       post_dir: "{blog}/posts"
