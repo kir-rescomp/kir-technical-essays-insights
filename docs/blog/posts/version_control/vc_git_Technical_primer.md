@@ -12,7 +12,7 @@ tags:
 # Version Control with Git: A Technical Primer
 
 <p align="center">
-    <img src="../git_technical_primer_logo.png" alt="git-page_logo" width="300">
+    <img src="{{ config.site_url }}assets/images/posts/git_technical_primer_logo.png" alt="git-page_logo" width="300">
 </p>
 Version control is the practice of tracking and managing changes to code over time. Git, created by Linus Torvalds in 2005, has become the dominant distributed version control system in software development.
 
