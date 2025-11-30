@@ -9,7 +9,7 @@ title: Home
 
 
 <p align="center" style="margin-bottom: -50px;">
-    <img src="./images/kir_techincal_insights_essays_gray_with_coloured_stripes.svg" alt="rotating_dna" width="450" style="opacity: 0.9;"/>
+    <img src="assets/images/icons/kir_techincal_insights_essays_gray_with_coloured_stripes.svg" alt="rotating_dna" width="450" style="opacity: 0.9;"/>
 </p>
 
 

@@ -2,6 +2,8 @@ site_name: KIR - Research Computing Technical Essays / Insights
 site_author: The Kennedy Institute of Rheumatology, NDORMS, University of Oxford
 site_dir: public
 site_url: "https://kir-rescomp.github.io/kir-technical-essays-insights/"
+use_directory_urls: true  # Important for clean URLs
+
 
 #Repository information
 repo_name:  kir-rescomp/kir-technical-essays-insights 
@@ -10,8 +12,8 @@ repo_url: https://github.com/kir-rescomp/kir-technical-essays-insights
 
 theme:
   name: material
-  logo: images/kir_techincal_insights_essays_favicon_grayscale_color_stripes.svg
-  favicon: images/kir_standalone_logo.png
+  logo: assets/images/icons/kir_techincal_insights_essays_favicon_grayscale_color_stripes.svg
+  favicon: assets/images/icons/kir_standalone_logo.png
    # 404 page
   static_templates:
     - 404.html
