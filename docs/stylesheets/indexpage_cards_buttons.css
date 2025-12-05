@@ -3,7 +3,7 @@
     display: inline-block;
     padding: 0.6rem 1.5rem;
     margin-top: 0.5rem;
-    background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+    background: linear-gradient(120deg, #1e1f22, #808184);
     color: white !important;
     text-decoration: none;
     border-radius: 8px;
