@@ -34,7 +34,23 @@ title: Home
 
 </div>
 
+<div class="grid cards" markdown>
 
+- :star: **Featured Posts**
+
+  ---
+  Hand-picked articles covering importatnt topics in Research Computing
+
+  <a href="#featured-posts" class="md-button show-featured-btn">View Featured</a>
+
+- :material-post-outline: **All Posts**
+
+  ---
+  Browse the complete archive of technical articles and tutorials
+
+  [:octicons-arrow-right-24: View All Posts](blog/){ .md-button .md-button--primary}
+
+</div> 
 
 ## Featured Posts
 
