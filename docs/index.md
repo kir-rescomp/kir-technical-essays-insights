@@ -34,23 +34,33 @@ title: Home
 
 </div>
 
-<div class="grid cards" markdown>
 
-- :star: **Featured Posts**
+## Latest Content
 
-  ---
-  Hand-picked articles covering importatnt topics in Research Computing
 
-  <a href="#featured-posts" class="md-button show-featured-btn">View Featured</a>
+<div class="grid cards" markdown style="grid-template-columns: repeat(2, minmax(0, 400px)); justify-content: center; gap: 1rem;">
 
-- :material-post-outline: **All Posts**
+-   :star: **Featured Posts**
 
-  ---
-  Browse the complete archive of technical articles and tutorials
+    ---
 
-  [:octicons-arrow-right-24: View All Posts](blog/){ .md-button .md-button--primary}
+    Hand-picked articles covering important topics in research computing
 
-</div> 
+    <a href="#featured-posts" class="md-button show-featured-btn">View Featured</a>
+
+-   :material-post-outline: **All Posts**
+
+    ---
+
+    Browse the complete archive of technical articles and tutorials
+
+    [:octicons-arrow-right-24: View All Posts](blog/){ .md-button .md-button--primary }
+
+</div>
+
+---
+
+<div id="featured-posts" class="featured-section" style="display: none;">
 
 ## Featured Posts
 
@@ -79,4 +89,4 @@ title: Home
 
 </div>
 
-[View all posts :octicons-arrow-right-24:](blog/){ .md-button .md-button--primary }
+</div>
