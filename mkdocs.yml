@@ -148,3 +148,4 @@ extra_css:
   - stylesheets/code_block_colour_nord.css
   - stylesheets/code_block_colour_onedark.css
   - stylesheets/indexpage_featured_scroll_behavoiour.css
+  - stylesheets/indexpage_cards_buttons.css
