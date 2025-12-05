@@ -35,7 +35,7 @@ title: Home
 </div>
 
 
-## Latest Content
+<h2 align="center" style="text-decoration: underline;">Latest Content</h2>
 
 
 <div class="grid cards" markdown style="grid-template-columns: repeat(2, minmax(0, 400px)); justify-content: center; gap: 1rem;">
