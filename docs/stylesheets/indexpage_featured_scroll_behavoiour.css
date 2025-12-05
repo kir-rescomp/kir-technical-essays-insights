@@ -3,21 +3,16 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Featured section transitions */
+/* Featured section - starts visible for proper rendering */
 .featured-section {
   margin-top: 2rem;
-  animation: fadeIn 0.5s ease-in;
+  transition: opacity 0.5s ease-in, max-height 0.5s ease-in;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.featured-section.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
 }
 
 /* Optional: Add some spacing */

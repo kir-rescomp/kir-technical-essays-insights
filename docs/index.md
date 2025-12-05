@@ -60,11 +60,12 @@ title: Home
 
 ---
 
-<div id="featured-posts" class="featured-section" style="display: none;">
 
-## Featured Posts
 
-<div class="grid cards" markdown>
+
+<div id="featured-posts" class="grid cards featured-section" markdown>
+
+<h2 id="featured-posts-heading" class="featured-section" align="center" style="text-decoration: underline;">Featured Posts</h2>
 
 -   :fontawesome-solid-list-check: **Importance of Unit Testing**
     
