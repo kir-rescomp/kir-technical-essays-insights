@@ -40,7 +40,7 @@ title: Home
 
 <div class="grid cards" markdown style="grid-template-columns: repeat(2, minmax(0, 400px)); justify-content: center; gap: 1rem;">
 
--   :star: **Featured Posts**
+-   <center>:star: **Featured Posts**</center>
 
     ---
 
@@ -48,7 +48,7 @@ title: Home
 
     <a href="#featured-posts" class="fancy-button show-featured-btn">View Featured</a>
 
--   :material-post-outline: **All Posts**
+-   <center>:material-post-outline: **All Posts**</center>
 
     ---
 
