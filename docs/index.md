@@ -12,7 +12,6 @@ title: Home
     <img src="assets/images/icons/kir_techincal_insights_essays_gray_with_coloured_stripes.svg" alt="rotating_dna" width="450" style="opacity: 0.9;"/>
 </p>
 
-
 <div class="landing-page">
   <div class="hero">
     <p class="description">
@@ -22,6 +21,7 @@ title: Home
   </div>
 </div>
 
+!!! circle-info ""
 
 <div class="topics-bar" markdown>
 
@@ -30,10 +30,10 @@ title: Home
 [:material-server-network: HPC](blog/category/hpc/){ .topic-chip }
 [:material-dna: Bioinformatics](blog/category/bioinformatics/){ .topic-chip }
 [:material-docker: Containers](blog/category/containers/){ .topic-chip }
- 
 
 </div>
 
+!!! circle-info ""
 
 <h2 align="center" style="text-decoration: underline;">Latest Content</h2>
 
@@ -57,10 +57,6 @@ title: Home
     <a href="blog/" class="fancy-button">View All Posts :octicons-arrow-right-24:</a>
 
 </div>
-
----
-
-
 
 
 <div id="featured-posts" class="grid cards featured-section" markdown>
