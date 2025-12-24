@@ -1,3 +1,14 @@
+---
+date: 
+  created: 2025-12-10
+categories:
+  - Programming
+tags:
+  - Terminals
+  - Bash
+---
+
+
 #  Ghostty backspace behaviour over SSH
 
 Ghostty’s backspace behaviour over SSH comes down to how terminal state and environment are initialised on the remote side. By default, an SSH session inherits some basic environment, but it does not automatically know about Ghostty’s preferred TERM, key sequences, and erase character expectations. Without extra integration, the remote shell may come up with an stty erase that does not match the actual backspace code your terminal sends, so pressing backspace simply moves the cursor or prints control characters instead of deleting. Enabling shell-integration-features = ssh-env nudges SSH to export a richer, Ghostty-aware environment into the remote session, so the server sees the right TERM and related variables and configures line editing in a way that matches what Ghostty is actually sending for backspace and other keys
