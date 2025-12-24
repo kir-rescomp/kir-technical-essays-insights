@@ -11,6 +11,11 @@ tags:
 
 <div class="dracula" markdown="1">
 
+<p align="center">
+    <img src="{{ config.site_url }}assets/images/posts/r_package_export_to_rds.png" alt="r-package-logo" width="350"/>
+</p>
+
+
 When upgrading to a new version of R on the HPC cluster, your existing package library will not automatically carry over. This is by design—R packages are typically compiled for specific R versions and may not be compatible across major version changes. While you could manually reinstall packages one-by-one, this approach provides a systematic way to preserve and recreate your package environment.
 
 The key challenge in HPC environments is that packages often come from different sources—primarily CRAN (the Comprehensive R Archive Network) and Bioconductor (specialized for bioinformatics packages). These repositories have different installation methods and dependency resolution systems, so it's important to track which packages came from where. The approach below separates your packages by source, ensuring they're reinstalled using the correct method.
