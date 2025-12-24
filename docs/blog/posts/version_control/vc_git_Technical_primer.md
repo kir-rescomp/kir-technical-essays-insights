@@ -1,16 +1,15 @@
 ---
 date: 
   created: 2025-11-29
+title: Version Control with Git -  A Technical Primer
 categories:
-  - Versionion Control
+  - Version Control
 tags:
   - Git
 ---
 
 <div class="dracula" markdown="1">
-
-# Version Control with Git: A Technical Primer
-
+ 
 <p align="center">
     <img src="{{ config.site_url }}assets/images/posts/git_technical_primer_logo.png" alt="git-page_logo" width="300">
 </p>

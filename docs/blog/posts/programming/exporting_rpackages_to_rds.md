@@ -1,6 +1,7 @@
 ---
 date: 
   created: 2025-12-10
+title: Migrating R Packages Between R Versions
 categories:
   - Programming
 tags:
@@ -9,9 +10,6 @@ tags:
 ---
 
 <div class="dracula" markdown="1">
-
-# Migrating R Packages Between R Versions
-
 
 When upgrading to a new version of R on the HPC cluster, your existing package library will not automatically carry over. This is by design—R packages are typically compiled for specific R versions and may not be compatible across major version changes. While you could manually reinstall packages one-by-one, this approach provides a systematic way to preserve and recreate your package environment.
 
