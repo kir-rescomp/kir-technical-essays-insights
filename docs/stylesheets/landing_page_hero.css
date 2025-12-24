@@ -43,12 +43,13 @@
 
 .topic-chip {
   padding: 0.5rem 1rem;
-  background: var(--md-default-fg-color--lightest);
+/*  background: var(--md-default-fg-color--lightest);*/
+  background: #191944;
   border-radius: 20px;
   text-decoration: none;
   font-size: 0.9rem;
   transition: all 0.2s;
-  color: #09218f!important;
+  color: #f5c254!important;
 }
 
 .topic-chip:hover {
