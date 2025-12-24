@@ -1,6 +1,7 @@
 ---
 date: 
   created: 2025-11-29
+title: Unit Testing for Research Software - A Practical Guide
 categories:
   - Programming
 tags:
@@ -9,8 +10,6 @@ tags:
 ---
 
 <div class="dracula" markdown="1">
-
-# Unit Testing for Research Software: A Practical Guide
 
 <p align="center">
     <img src="{{ config.site_url }}assets/images/posts/unit_testing_logo.png" alt="unit-test-logo" width="350"/>

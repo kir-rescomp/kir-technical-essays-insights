@@ -1,6 +1,7 @@
 ---
 date: 
   created: 2025-12-10
+title: Fixing Ghostty Backspace Behaviour Over SSH
 categories:
   - Programming
 tags:
@@ -10,17 +11,37 @@ tags:
 
 <div class="dracula" markdown="1">
 
-#  Ghostty backspace behaviour over SSH
+If you've recently switched to [Ghostty](https://ghostty.org/) and noticed that backspace doesn't work properly when SSH'ing into remote servers, you're not alone. Instead of deleting characters, pressing backspace might move the cursor around or print control characters like `^?` or `^H`. This post explains why this happens and how to fix it.
 
-Ghostty’s backspace behaviour over SSH comes down to how terminal state and environment are initialised on the remote side. By default, an SSH session inherits some basic environment, but it does not automatically know about Ghostty’s preferred `TERM`, key sequences, and erase character expectations. Without extra integration, the remote shell may come up with an `stty` erase that does not match the actual backspace code your terminal sends, so pressing backspace simply moves the cursor or prints control characters instead of deleting. Enabling shell-integration-features = ssh-env nudges SSH to export a richer, Ghostty-aware environment into the remote session, so the server sees the right TERM and related variables and configures line editing in a way that matches what Ghostty is actually sending for backspace and other keys
+## The Problem
 
-* Solution is to add the following to **~/.config/ghostty/config**
+When you SSH into a remote server from Ghostty, the backspace key may not delete characters as expected. This is frustrating when you're trying to edit commands on the remote shell, as each backspace press either does nothing or produces unexpected behaviour.
+
+## Why This Happens
+
+The issue boils down to a mismatch between what Ghostty sends when you press backspace and what the remote shell expects to receive.
+
+When you establish an SSH connection, the remote shell needs to know certain things about your terminal:
+
+- What type of terminal you're using (the `TERM` environment variable)
+- What character code to treat as "erase" (configured via `stty`)
+- Various other terminal capabilities and key sequences
+
+By default, SSH sessions inherit only a basic environment. The remote server doesn't automatically know about Ghostty's preferred terminal settings, including what byte sequence Ghostty sends for backspace. Without this information, the remote shell's line editing configuration (`stty erase`) doesn't match what Ghostty is actually sending, resulting in the backspace misbehaviour.
+
+## The Solution
+
+Ghostty provides a shell integration feature specifically designed to address this. Add the following line to your Ghostty configuration file at `~/.config/ghostty/config`:
 
 ```py
 shell-integration-features = ssh-env
 ```
 
-* Few additional modifications 
+This setting instructs Ghostty to export a richer, Ghostty-aware environment when you initiate SSH connections. The remote server will then receive the correct `TERM` value and related variables, allowing it to configure its line editing to match what Ghostty actually sends for backspace and other special keys.
+
+### Complete Example Configuration
+
+Here's a more complete Ghostty configuration including the SSH environment fix and some other useful settings:
 
 ```py
 font-family = FiraCode Nerd Font Mono SemBd
@@ -30,15 +51,54 @@ keybind = ctrl+v=paste_from_clipboard
 shell-integration-features = ssh-env
 ```
 
-## Zellij on Ghostty
+## The Zellij Complication
 
-The moment Zellij enters the picture, there is another translation layer between Ghostty and the remote shell. Your key presses go Ghostty → Zellij → SSH → remote shell, and Zellij has its own ideas about terminal compatibility and key handling. While ssh-env is enough to teach a remote shell about Ghostty, it does not apply once Zellij is effectively acting as the “terminal” from the SSH client’s perspective. From the remote host’s point of view, it is now talking to whatever `TERM` and key behaviour Zellij presents, not Ghostty directly. That is why a second fix is needed: using `~/.ssh/config` (for example by forcing a specific TERM or environment) ensures that the SSH session created from inside Zellij carries consistent terminal metadata to the remote host. In practice, Ghostty’s shell integration makes direct SSH sessions behave, and the SSH config tweak makes the Zellij‑through‑Ghostty path look equally well‑behaved from the cluster’s perspective, so the erase character and backspace semantics finally line up.
+If you use [Zellij](https://zellij.dev/) (a terminal multiplexer) with Ghostty, you'll encounter an additional layer of complexity.
 
-* Proposed solution is to add the following to host config on **~/.ssh/config**
+### Why Zellij Changes Things
+
+When Zellij is running, your keystrokes follow this path:
+
 ```py
-     SendEnv TERM
-     SetEnv TERM=xterm-256color
+Ghostty → Zellij → SSH → Remote Shell
 ```
 
+Zellij acts as an intermediary terminal layer with its own ideas about terminal compatibility and key handling. From the remote host's perspective, it's no longer talking directly to Ghostty—instead, it sees whatever `TERM` and terminal behaviour Zellij presents.
+
+This means that while `shell-integration-features = ssh-env` solves the problem for direct SSH connections from Ghostty, it doesn't help when Zellij is in the middle. The remote server needs different terminal metadata when accessed through Zellij.
+
+### The Additional Fix for Zellij
+
+To make backspace work correctly when SSH'ing from within Zellij, you need to configure SSH to send explicit terminal information. Add the following to your SSH host configuration in `~/.ssh/config`:
+
+```py
+Host your-remote-host
+    SendEnv TERM
+    SetEnv TERM=xterm-256color
+```
+
+These directives ensure that:
+
+1. `SendEnv TERM` tells SSH to send the `TERM` environment variable to the remote host
+2. `SetEnv TERM=xterm-256color` explicitly sets a widely-compatible terminal type
+
+This configuration works around the Zellij layer by forcing consistent terminal metadata that the remote host can understand and configure appropriately.
+
+### Wildcard Configuration
+
+If you want this fix to apply to all your SSH connections, you can use a wildcard:
+
+```py
+Host *
+    SendEnv TERM
+    SetEnv TERM=xterm-256color
+```
+
+## Summary
+
+- **Direct SSH from Ghostty**: Enable `shell-integration-features = ssh-env` in Ghostty's config
+- **SSH from Zellij in Ghostty**: Additionally configure `~/.ssh/config` to explicitly set and send the `TERM` variable
+
+With both configurations in place, your backspace key should work reliably whether you're SSH'ing directly from Ghostty or from within a Zellij session.
 
 </div>
