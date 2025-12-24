@@ -11,6 +11,7 @@ tags:
 
 <div class="dracula" markdown="1">
 
+
 If you've recently switched to [Ghostty](https://ghostty.org/) and noticed that backspace doesn't work properly when SSH'ing into remote servers, you're not alone. Instead of deleting characters, pressing backspace might move the cursor around or print control characters like `^?` or `^H`. This post explains why this happens and how to fix it.
 
 ## The Problem
