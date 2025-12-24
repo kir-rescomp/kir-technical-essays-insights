@@ -25,12 +25,12 @@ title: Home
 
 <div class="topics-bar" markdown>
 
+[:fontawesome-solid-square-binary: Programming](blog/category/programming/){ .topic-chip } 
 [:material-school: Workshops](https://kir-rescomp.github.io/kir-training-home/){ .topic-chip }
 [:material-server-network: HPC](blog/category/hpc/){ .topic-chip }
 [:material-dna: Bioinformatics](blog/category/bioinformatics/){ .topic-chip }
 [:material-docker: Containers](blog/category/containers/){ .topic-chip }
-[:fontawesome-solid-square-binary: Programming](blog/category/programming/){ .topic-chip }  
-
+ 
 
 </div>
 
