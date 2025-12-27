@@ -46,7 +46,7 @@ title: Home
 
     Hand-picked articles covering important topics in research computing
 
-    <a href="#featured-posts" class="fancy-button show-featured-btn">View Featured</a>
+    <center><a href="#featured-posts" class="fancy-button show-featured-btn">View Featured</a></center>
 
 -   <center>:material-post-outline: **All Posts**</center>
 
@@ -54,7 +54,7 @@ title: Home
 
     Browse the complete archive of technical articles and tutorials
 
-    <a href="blog/" class="fancy-button">View All Posts :octicons-arrow-right-24:</a>
+    <center><a href="blog/" class="fancy-button">View All Posts :octicons-arrow-right-24:</a></center>
 
 </div>
 
