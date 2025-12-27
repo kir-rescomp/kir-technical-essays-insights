@@ -40,7 +40,7 @@ title: Home
 
 <div class="grid cards" markdown style="grid-template-columns: repeat(2, minmax(0, 400px)); justify-content: center; gap: 1rem;">
 
--   <center>:star: **Featured Posts**</center>
+-   <center>🎗️**Featured Posts**</center>
 
     ---
 
