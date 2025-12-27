@@ -13,6 +13,10 @@ tags:
 <p align="center">
     <img src="{{ config.site_url }}assets/images/posts/git_technical_primer_logo.png" alt="git-page_logo" width="300">
 </p>
+
+!!! circle-info-2 ""
+    If you’d like more information or hands-on training on Git and GitHub, please refer to this [Introduction to Git and Github](https://kir-rescomp.github.io/training-intro-to-git-github/) on KIR Training Catalogue
+
 Version control is the practice of tracking and managing changes to code over time. Git, created by Linus Torvalds in 2005, has become the dominant distributed version control system in software development.
 
 ## Core Concepts
