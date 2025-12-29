@@ -12,7 +12,7 @@ tags:
 <div class="nord" markdown="1">
 When you run `module avail` on our cluster, you'll see names like:
 
-```py
+```sh
 Python/3.11.3-GCCcore-12.3.0
 R/4.3.2-gfbf-2023a
 BLAST+/2.14.1-gompi-2023a
@@ -108,15 +108,15 @@ Chaos, right? The same applies to compiled software. Mixing toolchains can cause
 
 Let's decode a real module name:
 
-```
-TensorFlow/2.6.0-foss-2021a-CUDA-11.3.1
+```sh
+TensorFlow/2.15.1-foss-2023a-CUDA-12.1.1
 ```
 
 Breaking it down:
 - **TensorFlow**: The software package
-- **2.6.0**: TensorFlow version
-- **foss-2021a**: Built with the foss 2021a toolchain
-- **CUDA-11.3.1**: GPU support with CUDA version 11.3.1
+- **2.15.1**: TensorFlow version
+- **foss-2023a**: Built with the foss 2023a toolchain
+- **CUDA-12.1.1**: GPU support with CUDA version 12.1.1
 
 When you load this module, you're getting TensorFlow compiled specifically with:
 - GCC compilers from foss-2021a
