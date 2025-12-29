@@ -27,7 +27,7 @@ title: Home
 
 [:fontawesome-solid-square-binary: Programming](blog/category/programming/){ .topic-chip } 
 [:material-school: Workshops](https://kir-rescomp.github.io/kir-training-home/){ .topic-chip }
-[:material-server-network: HPC](blog/category/high_performance_computing/){ .topic-chip }
+[:material-server-network: HPC](blog/category/hpc/){ .topic-chip }
 [:material-dna: Bioinformatics](blog/category/bioinformatics/){ .topic-chip }
 [:material-docker: Containers](blog/category/containers/){ .topic-chip }
 
@@ -80,7 +80,7 @@ title: Home
     
     Why `Git` matters
     
-    [:octicons-arrow-right-24: Read more](blog/posts/version_control/vc_git_Technical_primer.md)
+    [:octicons-arrow-right-24: Read more](blog/posts/programming/vc_git_Technical_primer.md)
     
     <small>:octicons-calendar-24: Nov 15, 2024 · :octicons-clock-24: 5 min read</small>
 
