@@ -9,6 +9,11 @@ tags:
   - Linux
   - Toolchains
 ---
+
+<p align="center">
+    <img src="{{ config.site_url }}assets/images/posts/demytifying_compiler_toolchains_logo.png" alt="compiler-toolchains-logo" width="350"/>
+</p>
+
 <div class="nord" markdown="1">
 When you run `module avail` on our cluster, you'll see names like:
 
