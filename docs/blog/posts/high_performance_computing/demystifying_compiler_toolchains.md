@@ -12,7 +12,7 @@ tags:
 <div class="nord" markdown="1">
 When you run `module avail` on our cluster, you'll see names like:
 
-```sh
+```py
 Python/3.11.3-GCCcore-12.3.0
 R/4.3.2-gfbf-2023a
 BLAST+/2.14.1-gompi-2023a
@@ -108,7 +108,7 @@ Chaos, right? The same applies to compiled software. Mixing toolchains can cause
 
 Let's decode a real module name:
 
-```sh
+```py
 TensorFlow/2.15.1-foss-2023a-CUDA-12.1.1
 ```
 
@@ -131,7 +131,7 @@ For most users, follow these guidelines:
 ### Starting a New Project?
 Use the **latest foss toolchain** available. Check what's current:
 
-```bash
+```py
 module avail foss
 ```
 
@@ -147,7 +147,7 @@ Try the **intel toolchain** if:
 ### Installing New Software?
 Check what toolchains are available:
 
-```bash
+```py
 module avail YourSoftware
 ```
 
