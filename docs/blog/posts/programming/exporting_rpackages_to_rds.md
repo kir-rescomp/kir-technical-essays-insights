@@ -53,7 +53,6 @@ saveRDS(list(cran = cran_packages, bioc = bioc_packages), "my_packages_by_repo.r
 #### Step 2: Reinstall Packages in the New R Version
 
 After switching to the **new version of R** (e.g., by loading a different module), run the following to reinstall your packages:
-```r
 
 ```r
 # Load package lists
