@@ -53,7 +53,24 @@ How It Works
 ### Complete `.Rprofile` Example
 
 ```r
+# Dynamically set R package location based on R version and platform
+r_version <- paste(R.version$major, 
+                   strsplit(R.version$minor, "\\.")[[1]][1], 
+                   sep = ".")
+platform <- R.version$platform
+user_lib <- path.expand(sprintf("~/devel/R/%s-library/%s/", platform, r_version))
 
+if (dir.exists(user_lib)) {
+  .libPaths(c(user_lib, .libPaths()))
+} else {
+  warning(sprintf("User library path does not exist: %s", user_lib))
+}
+
+# Set a local mirror for packages
+options(repos = structure(c(CRAN = "https://www.stats.bris.ac.uk/R/")))
+
+# Set cairo as the default bitmap type
+options(bitmapType = 'cairo')
 ```
 
 ## Alternative: Explicit Version Checking
