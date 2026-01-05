@@ -17,6 +17,7 @@ When managing multiple R versions in an HPC environment, hardcoding library path
 ```r
 .libPaths(c("~/devel/R/4.3/skylake/"))
 ```
+
 This works fine—until you switch to R 4.4 or 4.5. Suddenly, you're either loading incompatible packages or manually editing your `.Rprofile` every time you change R modules.
 
 ## The Solution: Version-Aware Library Paths
