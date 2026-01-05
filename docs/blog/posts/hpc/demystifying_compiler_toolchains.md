@@ -98,6 +98,7 @@ The letter (a, b) indicates releases within the same year. This naming ensures r
 Here's the golden rule: **Software built with one toolchain should not be mixed with software from another.**
 
 Why? Imagine building a house where:
+
 - The electrical system uses metric measurements
 - The plumbing uses imperial measurements  
 - The structural beams use a third system
@@ -177,7 +178,8 @@ A: Start with foss—it works for 95% of cases. If you hit performance bottlenec
 Compiler toolchains are like orchestras—individual instruments (compiler, MPI, math libraries) working in harmony to produce beautiful results. The toolchain name in module labels tells you which "orchestra" was used to build that software.
 
 When in doubt:
-1. **Check available versions**: `module avail YourSoftware`
+
+1. **Check available versions**: `module avail YourSoftware` ( or `module spider`)
 2. **Pick a recent foss toolchain**: Most compatible, well-tested
 3. **Stay consistent**: Don't mix toolchains unnecessarily
 4. **Ask for help**: We're here to guide you!
