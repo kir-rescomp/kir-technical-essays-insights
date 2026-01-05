@@ -29,7 +29,8 @@ Instead of hardcoding the R version, we can make .Rprofile detect the current R 
 r_version <- paste(R.version$major, 
                    strsplit(R.version$minor, "\\.")[[1]][1], 
                    sep = ".")
-user_lib <- path.expand(sprintf("~/devel/R/%s/skylake/", r_version))
+platform <- R.version$platform
+user_lib <- path.expand(sprintf("~/devel/R/%s-library/%s/", platform, r_version))
 
 # Check if the directory exists, if not, warn the user
 if (dir.exists(user_lib)) {
@@ -45,29 +46,14 @@ How It Works
 
 - **Extract the version**: `R.version$major` and `R.version$minor` give us the version components
 - **Parse major.minor**: We extract just "4.3", "4.4", or "4.5" (not the full minor version like "4.3.2")
+- **Get the platform**: `R.version$platform` provides the architecture string (e.g., `x86_64-pc-linux-gnu`)
 - **Construct the path**: Using `sprintf()` to build the path dynamically
 - **Prepend to library paths**: Using `.libPaths(c(user_lib, .libPaths()))` ensures your user library takes precedence while keeping system libraries as fallback
 
 ### Complete `.Rprofile` Example
 
 ```r
-# Dynamically set R package location based on R version
-r_version <- paste(R.version$major, 
-                   strsplit(R.version$minor, "\\.")[[1]][1], 
-                   sep = ".")
-user_lib <- path.expand(sprintf("~/devel/R/%s/skylake/", r_version))
 
-if (dir.exists(user_lib)) {
-  .libPaths(c(user_lib, .libPaths()))
-} else {
-  warning(sprintf("User library path does not exist: %s", user_lib))
-}
-
-# Set a local mirror for packages
-options(repos = structure(c(CRAN = "https://www.stats.bris.ac.uk/R/")))
-
-# Set cairo as the default bitmap type
-options(bitmapType = 'cairo')
 ```
 
 ## Alternative: Explicit Version Checking
@@ -94,6 +80,29 @@ if (!is.null(user_lib) && dir.exists(user_lib)) {
 ```
 
 This approach is useful if different R versions need different handling or if you're maintaining legacy versions with special requirements.
+
+
+!!! tip "Tips"
+
+    Create library directories in advance: Set up your directory structure before installing packages:
+
+    ```py
+    mkdir -p ~/devel/R/x86_64-pc-linux-gnu-library/{4.3,4.4,4.5}
+    ```
+
+    - Verify your platform string: Check what R reports:
+
+    ```r
+    R.version$platform
+    # [1] "x86_64-pc-linux-gnu"
+    ```
+
+    Test after changes: After modifying .Rprofile, start a new R session and verify:
+
+    ```r
+    .libPaths()
+    # Should show your user library first, then system libraries
+    ```
 
 
 </div>
