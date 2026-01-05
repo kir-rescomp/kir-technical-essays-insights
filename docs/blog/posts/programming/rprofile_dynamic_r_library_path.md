@@ -78,15 +78,16 @@ options(bitmapType = 'cairo')
 If you need more granular control or want to handle specific versions differently:
 
 ```r
-# Get R version
+# Get R version and platform
 r_version <- getRversion()
+platform <- R.version$platform
 
 if (r_version >= "4.5.0") {
-  user_lib <- path.expand("~/devel/R/4.5/skylake/")
+  user_lib <- path.expand(sprintf("~/devel/R/%s-library/4.5/", platform))
 } else if (r_version >= "4.4.0") {
-  user_lib <- path.expand("~/devel/R/4.4/skylake/")
+  user_lib <- path.expand(sprintf("~/devel/R/%s-library/4.4/", platform))
 } else if (r_version >= "4.3.0") {
-  user_lib <- path.expand("~/devel/R/4.3/skylake/")
+  user_lib <- path.expand(sprintf("~/devel/R/%s-library/4.3/", platform))
 } else {
   user_lib <- NULL
 }
