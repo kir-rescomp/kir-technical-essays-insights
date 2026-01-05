@@ -53,7 +53,24 @@ How It Works
 ### Complete `.Rprofile` Example
 
 ```r
+# Dynamically set R package location based on R version and platform
+r_version <- paste(R.version$major, 
+                   strsplit(R.version$minor, "\\.")[[1]][1], 
+                   sep = ".")
+platform <- R.version$platform
+user_lib <- path.expand(sprintf("~/devel/R/%s-library/%s/", platform, r_version))
 
+if (dir.exists(user_lib)) {
+  .libPaths(c(user_lib, .libPaths()))
+} else {
+  warning(sprintf("User library path does not exist: %s", user_lib))
+}
+
+# Set a local mirror for packages
+options(repos = structure(c(CRAN = "https://www.stats.bris.ac.uk/R/")))
+
+# Set cairo as the default bitmap type
+options(bitmapType = 'cairo')
 ```
 
 ## Alternative: Explicit Version Checking
@@ -61,15 +78,16 @@ How It Works
 If you need more granular control or want to handle specific versions differently:
 
 ```r
-# Get R version
+# Get R version and platform
 r_version <- getRversion()
+platform <- R.version$platform
 
 if (r_version >= "4.5.0") {
-  user_lib <- path.expand("~/devel/R/4.5/skylake/")
+  user_lib <- path.expand(sprintf("~/devel/R/%s-library/4.5/", platform))
 } else if (r_version >= "4.4.0") {
-  user_lib <- path.expand("~/devel/R/4.4/skylake/")
+  user_lib <- path.expand(sprintf("~/devel/R/%s-library/4.4/", platform))
 } else if (r_version >= "4.3.0") {
-  user_lib <- path.expand("~/devel/R/4.3/skylake/")
+  user_lib <- path.expand(sprintf("~/devel/R/%s-library/4.3/", platform))
 } else {
   user_lib <- NULL
 }
