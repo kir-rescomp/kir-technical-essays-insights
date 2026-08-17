@@ -1,3 +1,5 @@
+<h1 align="center">This repo is archived now. Please refer to https://kir-rescomp.github.io/kir-researchcomp-hub/technical_essays</h1>
+
 <h1 align="center"> KIR Research Computing Technical Essays / Insights</h1>
 
 
